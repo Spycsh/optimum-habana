@@ -93,6 +93,7 @@ MODELS_OPTIMIZED_WITH_STATIC_SHAPES = [
     "seamless_m4t",
     "starcoder2",
     "persimmon",
+    "qwen",
     "qwen2",
     "llava",
     "llava_next",
