@@ -37,7 +37,6 @@ from transformers.trainer_utils import (
     SchedulerType,
 )
 from transformers.training_args import (
-    _VALID_DICT_FIELDS,
     OptimizerNames,
     ParallelMode,
     TrainingArguments,
@@ -428,7 +427,7 @@ class GaudiTrainingArguments(TrainingArguments):
             )
 
         # Parse in args that could be `dict` sent in from the CLI as a string
-        for field in _VALID_DICT_FIELDS:
+        for field in self._VALID_DICT_FIELDS:
             passed_value = getattr(self, field)
             # We only want to do this if the str starts with a bracket to indiciate a `dict`
             # else its likely a filename if supported
